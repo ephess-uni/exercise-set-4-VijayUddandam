@@ -19,7 +19,32 @@ def time_between_shutdowns(logfile):
     """
     Your docstring here.  Replace the pass keyword below with your implementation.
     """
-    pass
+    shutdown_times = []  
+    
+    try:
+        with open(logfile, 'r') as file: 
+            for line in file: 
+                if "Shutdown initiated" in line or "Shutdown complete" in line:  
+                    timestamp = line.split()[1]  
+                    shutdown_times.append(timestamp) 
+    
+        shutdown_times = [logstamp_to_datetime(timestamp) for timestamp in shutdown_times] 
+    
+        if len(shutdown_times) < 2: 
+            print("Error: Insufficient shutdown events for comparison.")
+            return None
+        
+        time_difference = max(shutdown_times) - min(shutdown_times)  
+        return time_difference
+
+    except FileNotFoundError:  
+        print("Error: Log file not found.")
+        return None
+
+    except Exception as e:  
+        print(f"An error occurred: {e}")
+        return None
+
 
 
 # >>>> The code below will call your function and print the results
