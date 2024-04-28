@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Test ex_4_0",
+      "setup": "",
+      "run": "pytest -k 'ex_4_0'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Test ex_4_1",
+      "setup": "",
+      "run": "pytest -k 'ex_4_1'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Test ex_4_2",
+      "setup": "",
+      "run": "pytest -k 'ex_4_2'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Test ex_4_3",
+      "setup": "",
+      "run": "pytest -k 'ex_4_3'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
